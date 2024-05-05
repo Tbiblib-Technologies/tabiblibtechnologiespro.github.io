@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirection OS</title>
+    <script>
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Redirection pour les utilisateurs d'Android
+            if (/android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.tabiblib.amaster&pcampaignid=web_share";
+            }
+            // Redirection pour les utilisateurs d'IOS
+            else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://apps.apple.com/us/app/tabiblib-pro-rdv-m%C3%A9dicaux/id6477495059";
+            }
+            // Redirection pour les autres systèmes (facultatif)
+            else {
+                window.location.href = "pro.tabiblib.dz";
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>Redirection en cours...</p>
+</body>
+</html>
